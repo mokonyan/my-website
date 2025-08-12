@@ -1,0 +1,92 @@
+header {
+	margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+	background: #FF0004;
+}
+
+.l-header {
+  padding: 50px 0 100px 0;
+  position: relative;
+}
+
+.l-header_onair {
+    width: 25%;
+    max-width: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-10px);/*! 縦方向に上へ10ピクセル移動 */
+    opacity: 0;/*! 要素を透明 */
+    transition: transform 0.6s var(--ease-main) 0.1s, opacity 0.6s var(--ease-main) 0.1s;/*! UX */
+	background: #00EBFF;
+}
+
+.l-header_logo {
+    width: 215px;
+    margin: 0 auto;
+    transform: translateY(-10px);/*! 縦方向に上へ10ピクセル移動 */
+    opacity: 0;/*! 要素を透明 */
+    transition: transform 0.8s var(--ease-bound), opacity 0.8s var(--ease-main);/*! UX */
+}
+
+.l-main {
+    padding-bottom: 142px;
+}
+
+.p-story_title {
+    width: 15%;
+    margin: 0 auto 78px;
+}
+
+.p-story_contents-list {
+    display: flex;/*! 子要素を横並び デフォルトでは左から右 */
+    flex-wrap: wrap;/*! 横幅が足りないときに、子要素を次の行に折り返し */
+    width: 82.8%;
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s var(--ease-main) 0.2s, transform 0.5s var(--ease-bound) 0.2s;
+	background: #FF0004;
+}
+
+.p-story_contents-list-item {
+    width: 31%;
+    margin-bottom: 3.4%;
+    border: 3px solid var(--color-main-blue);
+    background-color: var(--color-main-blue);
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-bound);
+    cursor: pointer;
+}
+
+.p-story_contents-list-item a {
+    display: block;
+}
+
+.p-story_contents-list-item .p-in-image {
+    width: 100%;
+    padding-top: 56%;
+    position: relative;
+    background: var(--color-white);
+    overflow: hidden;
+}
+
+.p-story_contents-list-item .p-in-image-item {
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background: #C000FF;
+}
+
