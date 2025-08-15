@@ -12,30 +12,138 @@ table, tbody, tfoot, thead, tr, th, td, caption,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video, source {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  box-sizing: border-box;/*! paddingとボーダーもコンテンツに含める設定 */
+	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	outline: 0;
+  	font-size: 100%;
+  	vertical-align: baseline;
+  	background: transparent;
+  	box-sizing: border-box;/*! paddingとボーダーもコンテンツに含める設定 */
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  	display: block;
+}
+
+blockquote, q {
+  	quotes: none;/*!  “”自動引用符が非表示 */
 }
 
 a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+  	margin: 0;
+  	padding: 0;
+  	font-size: 100%;
+  	vertical-align: baseline;
+  	background: transparent;
+  	text-decoration: none;
 }
 
 img {
-  max-width: 100%;/*! 画像の最大幅を親要素の幅（100%）までに制限 つまり、画像が親の幅を超えて大きくならないようにする 例えば、親が幅300pxなら画像も最大300pxまで縮小 */
-  display: block;
-  vertical-align: middle;
+  	max-width: 100%;/*! 画像の最大幅を親要素の幅（100%）までに制限 つまり、画像が親の幅を超えて大きくならないようにする 例えば、親が幅300pxなら画像も最大300pxまで縮小 */
+  	display: block;
+  	vertical-align: middle;
+}
+
+ins {
+  	background-color: #ff9;
+  	color: #000;
+  	text-decoration: none;
+}
+
+mark {
+  	background-color: #ff9;
+  	color: #000;
+  	font-style: italic;
+  	font-weight: bold;
+}
+
+del {
+  	text-decoration: line-through;
+}
+
+table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+}
+
+hr {
+  	display: block;
+  	height: 1px;
+  	border: 0;
+  	border-top: 1px solid #cccccc;
+  	margin: 1em 0;
+  	padding: 0;
 }
 
 ol, ul {
-  list-style: none;
+  	list-style: none;
+}
+
+button, input, select, textarea, datalist {
+  	vertical-align: middle;
+  	min-height: 1.5em;
+  	background-color: transparent;
+}
+
+iframe {
+  	border: none;
+}
+
+template {
+  	display: none;
+}
+
+body, button, input, select, textarea, datalist {
+  	-webkit-text-size-adjust: 100%;
+  	-moz-text-size-adjust: 100%;
+  	text-size-adjust: 100%;
+  	word-wrap: break-word;
+}
+
+img {
+  	max-width: 100%;
+  	display: block;
+  	vertical-align: middle;
+}
+
+html {
+  	font-size: 0.625em;
+}
+
+/* keyframes はトップレベルで定義 */
+@keyframes bgMoveDesktop {
+  	0% { background-position: 0 0; }
+  	100% { background-position: 800px -800px; }
+}
+
+@keyframes bgMoveMobile {
+  	0% { background-position: 0 0; }
+  	100% { background-position: 300px -300px; }
+}
+
+/* デフォルトはモバイル用 */
+body {
+  	line-height: 1;
+  	font-family: var(--font-jp);
+  	background: url("../img/bg_pattern.png") repeat left top/77px;
+  	animation: bgMoveMobile 20s linear infinite;
+}
+
+/* 900px以上はデスクトップ用に切り替え */
+@media screen and (min-width: 900px) {
+  body {
+    background-size: 77px;
+    animation: bgMoveDesktop 20s linear infinite;
+  }
+}
+
+.wrap {
+  	position: relative;
+  	overflow: hidden;
+}
+
+:root {
+  --font-jp: "Noto Sans JP","游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3", "HiVragino Kaku Gothic ProN", "メイリオ", Meiryo, "Helvetica Neue", Arial, "sans-serif";
+  --font-en: "Outfit", "Noto Sans JP", "游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3", "HiVragino Kaku Gothic ProN", "メイリオ", Meiryo, "Helvetica Neue", Arial, sans-serif;
 }
