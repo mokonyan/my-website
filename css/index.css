@@ -1,0 +1,333 @@
+.header {
+	margin: 0;
+    padding: 48px 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;/*! paddingやborderも合わせての幅を定義 */
+	position: relative;
+}
+
+@media screen and (max-width: 899px) {
+    .header {
+        padding: 48px 0;
+    }
+}
+
+.header_logo {
+    width: 360px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 899px) {
+    .header_logo {
+        width: 36%;
+    }
+}
+
+.main {/*! main */
+    padding-bottom: 142px;
+}
+
+.title {
+    width: 280px;/*! title */
+    margin: 0 auto 50px;
+}
+
+@media screen and (max-width: 899px) {
+    .title {
+        width: 28%;
+        margin: 0 auto 50px;
+    }
+}
+
+.tab-all {
+	display: flex;
+	width: 93%;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	max-width: 1280px;
+}
+
+.tab {
+	width: 20%;
+	margin-right: 10px;
+	text-align: center;
+	border-radius: 50rem;
+	font-size: 1.6rem;
+	background-color: #d7d7d7;
+	border: 1px solid #8a8a8a;
+	padding:16px;
+	color: black;
+	cursor:pointer;
+	font-weight: 600;
+}
+
+@media screen and (max-width: 899px) {
+    .tab {
+        font-size: 1.4rem;
+		padding:8px;
+    }
+}
+
+.tab:last-child {
+	margin-right: 0;
+}
+
+.tab.active {
+	background-color: #0078ff;
+  	border: 1px solid #235a99;
+  	color: #ffffff;
+}
+
+.tab-content {
+  	width:93%;
+  	margin:50px auto;
+  	background-color:#d7d7d7;
+  	padding:32px 32px;
+  	border-radius:30px;
+  	position: relative;
+  	display: none;
+  	max-width: 1280px;
+  	border: 1px solid #8a8a8a;
+}
+
+.tab-content-inner {
+  	position: relative;
+  	color: #000; /* 黒文字 */
+  	font-weight: 500;
+  	font-size: 1.8rem;
+  	line-height: 1.6;
+}
+
+.tab-title {
+	margin: 0 0 0.5em 0;
+	font-size: 2.5rem;
+	line-height: 1.4;
+}
+
+.tab-row {
+	display: table;
+	margin-bottom: 0.8em;
+}
+
+.tab-label {
+	display: table-cell;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.tab-value {
+	display: table-cell;
+}
+
+.contents-list {
+    display: flex;/*! 子要素を横並び デフォルトでは左から右 */
+    flex-wrap: wrap;/*! 横幅が足りないときに、子要素を次の行に折り返し */
+    width: 93%;/*! 親のdivの93％の幅 */
+    max-width: 1280px;
+    margin: 0 auto 20px;
+	background: #FF0004;
+}
+
+@media screen and (max-width: 899px) {
+    .contents-list {
+        width: 93%;/*! 親のdivの93％の幅 */
+    }
+}
+
+.contents-list-item {
+    width: 31%;/*! 親の.contents-listの幅の31％となるので3列で表示 */
+    margin-bottom: 4%;
+    border: 3px solid #1b1daf;
+    background-color: #1b1daf;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 899px) {
+    .contents-list-item {
+        width: 100%;/*! 親の.contents-listの幅 両サイドが8％の余白がつく */
+        margin-bottom: 4%;
+        border-radius: 15px;
+        border: 2px solid #1b1daf;
+    }
+}
+
+.contents-list-item .in-image {
+    padding-top: 56%;
+    position: relative;
+    overflow: hidden;
+	cursor: pointer;
+	width: calc(100% + 6px); /* borderの太さ×2を足す */
+    margin: -3px; /* borderの太さ分マイナスで外に出す */
+	border: none;
+}
+
+.contents-list-item .in-image-item {
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+	
+.contents-list-item .in-detail {
+    padding: 15px 18px 17px;
+    font-weight: 600;
+    color: #FFFFFF;
+	font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 900px) {
+    .contents-list-item {
+        margin-right: 3.5%;
+    }
+}
+	
+@media screen and (min-width: 900px) {
+    .contents-list-item:nth-of-type(3n) {/*! 3nで3の倍数のみ適用 */
+        margin-right: 0;
+    }
+}
+	
+footer {
+	background-color: #7a7a7a;
+	width: 100%;
+}
+
+.footer-inner {
+	width: 93%;
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between; /* 左右に配置 */
+	align-items: center; /* 縦中央揃え */
+	padding: 10px 0;
+}
+
+#copy{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    min-height: 52px;
+    padding: 17px 0 0 0;
+    width: 100%;
+	font-weight: 600;
+    color: #FFFFFF;
+	font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.pagetop {
+	width: 17.4%;
+	max-width: 80px;
+	background: #ffffff;
+	cursor: pointer;
+	font-weight: 600;
+	text-align: center;
+	font-size: 1.4rem;
+	padding: 8px;
+	border-radius: 50rem;
+}
+
+/* Lightboxの基本スタイル */
+.lightbox {
+	display: none; /* 初期は非表示 */
+  	position: fixed;
+  	top: 0; 
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background: rgba(0,0,0,0.8);
+  	justify-content: center;
+  	align-items: center;
+  	z-index: 9999;
+}
+
+/* 中央に表示するコンテンツ */
+.lightbox-content {
+  	max-width: 90%;
+  	max-height: 90%;
+  	overflow: hidden;
+  	border-radius: 0;
+  	animation: zoomIn 0.3s ease;
+  	position: relative; /* ボタン配置用 */
+}
+
+/* 中の画像を縮尺維持でフィットさせる */
+.lightbox-content img {
+ 	max-width: 100%;
+  	max-height: 100%;
+  	display: block;
+}
+
+.lightbox-close {
+  	position: absolute;
+  	top: 10px;
+  	right: 10px;
+  	font-size: 24px;
+  	color: white;
+  	background: rgba(0,0,0,0.5);
+  	border: none;
+  	border-radius: 50%;   /* これで丸くなる */
+  	width: 40px;           /* 幅 */
+  	height: 40px;          /* 高さ */
+  	display: flex;         /* 中央寄せ用 */
+  	justify-content: center; 
+  	align-items: center;   
+  	cursor: pointer;
+  	padding: 0;            /* 余白はリセット */
+}
+
+.lightbox-close:hover {
+  	background: rgba(0,0,0,0.8);
+}
+
+/* 拡大アニメーション */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#loading {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background-color: #fff; /* 背景色 */
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	z-index: 9999; /* 上に表示 */
+  	opacity: 1;
+  	transition: opacity 0.5s ease; /* フェードアウト用 */
+}
+
+.spinner {
+  	width: 50px;
+  	height: 50px;
+  	border: 5px solid #ccc;
+  	border-top-color: #636363;
+  	border-radius: 50%;
+  	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

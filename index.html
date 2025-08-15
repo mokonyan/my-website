@@ -1,73 +1,167 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h1 {
-      margin: 0;
-		background: #FF0004;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #007acc;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-      margin-top: 50px;
-    }
-  </style>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"><!-- ページの表示領域（ビューポート）をデバイスの画面幅と同じ幅に設定 スマホで見るときに画面が縮小されすぎず、レスポンシブデザインが正しく機能 -->
+	<meta name="robots" content="ALL"><!-- 検索エンジンに「このページは普通に検索結果に出してね」と伝えるタグ -->
+	<title>ポートフォリオサイト</title>
+	<meta name="description" content="ポートフォリオサイト">
+	<meta name="format-detection" content="telephone=no,address=no,email=no">
+	<meta name="theme-color" content="#dc1d2c"><!-- スマホでページを開いたとき、ブラウザ上部の色が指定した色になる -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- iPhoneやiPadでWebサイトをホーム画面に追加して“アプリのように”表示したときに、ステータスバー（時間・バッテリー表示部分）の見た目を変える設定 -->
+	<meta name="apple-mobile-web-app-capable" content="no"><!-- iPhoneやiPadで「ホーム画面に追加」したときに、アプリのような全画面表示をしないようにする設定 -->
+	<link rel="canonical" href="/"><!-- このページの正しい（代表）URLはこれですよ」**と検索エンジンに教えるためのタグ -->
+ 	<link rel="shortcut icon" href="img/favicon.ico">
+ 	<link rel="apple-touch-icon" href="img/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><!-- ブラウザに対して「これからこのURLに早めに接続（TCP/TLSの準備）しといてね」と指示するタグ -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- ブラウザに対して「これからhttps://fonts.gstatic.comに早めに接続準備をしておいてね」と指示するタグ -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet"><!-- Google Fontsからフォントスタイルを読み込むためのリンクタグ -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script defer src="js/common.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#works">Works</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+	
+<div id="loading">
+	<div class="spinner"></div>
+</div>	
+	
+<div class="wrap">
+		
+	<header class="header">
+		
+		<div class="header_logo">
+			<a href="">
+				<h1>
+					<img src="img/logo_main.png" alt="ポートフォリオ">
+				</h1>
+			</a>
+		</div>
+		
+	</header>
+	
+	<main class="main">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>ここに自己紹介を書きます。経験やスキルを簡潔にまとめてください。</p>
-  </section>
+		<div class="title">
+			<h2>
+				<img src="img/t_story.png" alt="STORY">
+			</h2>
+		</div>
+		
+		<ul class="tab-all">
+		  <li class="tab" data-target="tab1">新規立ち上げ</li>
+		  <li class="tab" data-target="tab2">モック制作</li>
+		  <li class="tab" data-target="tab3">マネジメント</li>
+		  <li class="tab" data-target="tab4">デザイン</li>
+		  <li class="tab" data-target="tab5">企画</li>
+		</ul>
 
-  <section id="works">
-    <h2>Works</h2>
-    <p>過去の制作物やプロジェクトの概要を紹介します。</p>
-  </section>
+		<div id="tab1" class="tab-content">
+			<div class="tab-content-inner">
+				<h2 class="tab-title">
+					■新規立ち上げ コインムスメ
+				</h2>
+				
+				<div class="tab-row">
+					<div class="tab-label">・目的：</div>
+					<div class="tab-value">NFT事業として新規ゲーム立ち上げ</div>
+				</div>
+				
+				<div class="tab-row">
+					<div class="tab-label">・役割：</div>
+					<div class="tab-value">
+ 						ゲームのUI設計とデザイン（アニメ演出等の作成、ロゴ作成、ガチャ演出、
+						レギュレーション作成、デザインコンセプト提案、リードデザイン）
+					</div>
+  				</div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-  </section>
+				<div class="tab-row">
+					  <div class="tab-label">・成果：</div>
+					  <div class="tab-value">
+						少人数体制（プランナー+デザイナー計2名、適宜アニメーターを増員）で開発からリリースに成功  
+						※開発メンバーは信頼のおける外部の専門企業に依頼
+					  </div>
+				</div>
+				
+				<img src="img/new_contents_01.png" alt="コインムスメ" />
 
-  <footer>
-    <p>&copy; 2025 mokonyan. All rights reserved.</p>
-  </footer>
+			</div>
+		</div>
+
+		<div style="display: none; margin: 50px auto;" id="tab2" class="tab-content">
+			<ul class="contents-list">
+
+				<li class="contents-list-item">
+						<button class="in-image openLightbox">
+							<div class="in-image-item" style="background: url('img/story_thumbnail_image_1001446.jpg')center no-repeat; background-size: contain;" >
+							</div>
+						</button>
+							  
+						<div class="in-detail">
+							<div>第5話「安静」「つり仙人」</div>
+						</div>
+				</li>
+
+				<li class="contents-list-item">
+						<button class="in-image openLightbox">
+							<div class="in-image-item" style="background: url('img/story_thumbnail_image_1001446.jpg')center no-repeat; background-size: contain;" >
+							</div>
+						</button>
+							  
+						<div class="in-detail">
+							<div>第5話「安静」「つり仙人」</div>
+						</div>
+				</li>
+				
+				<li class="contents-list-item">
+						<button class="in-image openLightbox">
+							<div class="in-image-item" style="background: url('img/story_thumbnail_image_1001446.jpg')center no-repeat; background-size: contain;" >
+							</div>
+						</button>
+							  
+						<div class="in-detail">
+							<div>第5話「安静」「つり仙人」</div>
+						</div>
+				</li>
+				
+				<li class="contents-list-item">
+						<button class="in-image openLightbox">
+							<div class="in-image-item" style="background: url('img/story_thumbnail_image_1001446.jpg')center no-repeat; background-size: contain;" >
+							</div>
+						</button>
+							  
+						<div class="in-detail">
+							<div>第5話「安静」「つり仙人」</div>
+						</div>
+				</li>
+				
+			</ul>
+		</div>
+
+	</main>
+	
+	<footer>
+		<div class="footer-inner">
+			<div id="copy">
+				<div>HASHIMOTO SATOSHI ポートフォリオサイト</div>
+			</div>
+			<div class="pagetop">
+				<div>TOPへ</div>
+			</div>
+		</div>
+	</footer>
+	
+</div>
+
+<div id="lightbox" class="lightbox">
+	<div class="lightbox-content" id="lightboxInner">
+		<button class="lightbox-close" id="closeLightbox">&times;</button>
+		<img src="img/story_thumbnail_image_1001446.jpg" alt="STORY">
+	</div>
+</div>	
+	
 </body>
+
 </html>
