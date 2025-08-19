@@ -27,7 +27,7 @@
 }
 
 .main {/*! main */
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .title {
@@ -75,7 +75,6 @@
         margin: 0;
         margin-right: 2%;
         margin-bottom: 2%;
-		font-size: 1rem;
     }
 	
 	.tab:nth-child(3) {
@@ -102,21 +101,28 @@
 }
 
 .tab-content {
-  	width:93%;
+  	display: none;
+}
+
+.tab-content-box {
+	width:93%;
   	margin:24px auto;
-  	background-color:#d7d7d7;
+	background-color: rgba(215, 215, 215, 0.6); /* 背景だけ60％透明 */
   	padding:32px 32px;
   	border-radius:30px;
   	position: relative;
-  	display: none;
   	max-width: 1280px;
   	border: 1px solid #8a8a8a;
 }
 
 @media screen and (max-width: 899px) {
 	.tab-content {
-		padding:16px;
 		border-radius:8px;
+	}
+	
+	.tab-content-box {
+		padding:16px;
+		border-radius:8px;	
 	}
 	
 }
@@ -136,7 +142,7 @@
 }
 
 .tab-title {
-	margin: 0 0 0.8em 0;
+	margin: 0 0 0.4em 0;
 	font-size: 2.5rem;
 	line-height: 1.4;
 }
@@ -152,10 +158,6 @@
 	margin-bottom: 0.8em;
 }
 
-.tab-row:nth-child(4) {
-	margin-bottom: 1.2em;
-}
-
 .tab-label {
 	display: table-cell;
 	font-weight: bold;
@@ -164,6 +166,12 @@
 
 .tab-value {
 	display: table-cell;
+}
+
+.highlight {
+  background-color: yellow;   /* 背景を黄色に */
+  padding: 2px 4px;           /* ちょっと余白を追加（読みやすさ用） */
+  border-radius: 1px;         /* 角を丸く（好みで） */
 }
 
 .contents-list {
@@ -384,4 +392,32 @@ footer {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.mar_1 {
+	margin-bottom: 1.2em;
+}
+
+.mar_2 {
+		margin: 1.2em 0;
+}
+
+.mar_3 {
+	margin-top: 1.2em;
+}
+
+.mar_4 {
+	margin-bottom: 1.5em;
+}
+
+.video-wrap{
+	text-align: center;
+}
+
+.video-wrap video {
+	width: 100%;
+  	max-width: 720px; /* PCでは720pxを上限に */
+  	height: auto;
+  	display: block;
+  	margin: 0 auto;
 }
