@@ -71,8 +71,8 @@ hr {
   	display: block;
   	height: 1px;
   	border: 0;
-  	border-top: 1px solid #cccccc;
-  	margin: 1em 0;
+	border-top: 1px dashed #666666;
+  	margin: 2.0em 0 1.5em 0;
   	padding: 0;
 }
 
