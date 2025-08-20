@@ -427,5 +427,6 @@ footer {
     width: 100%;
     height: auto;
     display: block; /* 中央寄せしたいなら margin: 0 auto; も可 */
+	margin-top: 1.2em;
   }
 }
