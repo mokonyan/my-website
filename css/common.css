@@ -114,12 +114,12 @@ html {
 /* keyframes はトップレベルで定義 */
 @keyframes bgMoveDesktop {
   	0% { background-position: 0 0; }
-  	100% { background-position: 800px -800px; }
+  	100% { background-position: 770px -770px; } /* 77×10 */
 }
 
 @keyframes bgMoveMobile {
   	0% { background-position: 0 0; }
-  	100% { background-position: 300px -300px; }
+  	100% { background-position: 308px -308px; } /* 77×4 */
 }
 
 /* デフォルトはモバイル用 */
